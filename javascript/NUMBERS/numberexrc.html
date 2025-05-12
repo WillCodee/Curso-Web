@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio com Numbers</title>
+</head>
+<body>
+    <h1>Number Exercicios</h1>
+
+    <h2>Seu Número é <span id="titulo">0</span> <br/></h2>
+    <div id="texto"></div>
+    <script>
+        const num = Number(prompt('Digite um Número'))
+        const numero_titulo =document.getElementById('titulo')
+        const texto = document.getElementById('texto')
+
+        numero_titulo.innerHTML = num
+        texto.innerHTML += `Raiz quadrada: ${num**0.5}<br/>`
+        texto.innerHTML += `${num} é inteiro: ${Number.isInteger(num)}<br/>`
+        texto.innerHTML += `É NaN: ${Number.isNaN(num)}<br/>`
+        texto.innerHTML += `Arredondado para baixo: ${Math.floor(num)}<br/>`
+        texto.innerHTML += `Arredondado para cima: ${Math.ceil(num)}<br/>`
+        texto.innerHTML += `Com Duas Casas Decimais: ${num.toFixed(2)} <br/>`
+
+    </script>
+</body>
+</html>

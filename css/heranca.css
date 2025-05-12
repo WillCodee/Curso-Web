@@ -1,0 +1,21 @@
+body{
+    color: red;
+    font-family: sans-serif;
+}
+
+#texto{
+    color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 70px;
+}
+
+p{
+    font-size: initial;
+}
+/* Inicialmente como estava  (desativa  a herenaça) */
+
+h1{
+    font-size: inherit;
+}
+
+/* Ativa a herança */

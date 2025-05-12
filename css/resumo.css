@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.grid{
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 73px;
+}
+.grid .col{
+    float: left;
+    /* flutuar, assim as margens não se sobrepoem */
+    width: 33.33%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.grid .col-content{
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50px;
+    box-shadow: 5px 5px 15px 5px blue;
+    /* Os dois primeiros é a posição da sombra
+    sendo positivo ou negativo */
+    /* Blur efeito de glow */
+    box-shadow: inset 0 0 5px 2px blue, 5px 5px 5px rgba(0,0,0,0.842);
+}
+    
+    
+.grid .col-content:hover{
+    background: rgb(153, 31, 31);
+    
+}
+
+.grid::after{
+    content: 'Grid After(depois) ';
+    display: block;
+    clear: both;
+}
+p{
+    clear: both;
+    /* Limpar os dois lados */
+    /* Left :Limpar a esquerda */
+}
+
+.menu{
+    width: 100%;
+    position: fixed;
+    background: rgba(0,0,0,0.842);
+    
+}
+
+.menu ul{
+    list-style: none;
+    display: block;
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.menu li{
+    float: left;
+}
+
+.menu ul li a{
+    display: block;
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+.menu ul li a:hover{
+    background: #333;
+}
+
+@media all and (max-width:320px){
+    /* 0 a 320px */
+    /* all -> todos os dispositivos */
+    .grid .col{
+        width: 100%;
+    }
+}
+
+@media all and (min-width:320px) and (max-width:768px){
+    /* Largura minima é de 321px */
+    /* Entre 320px e 768px */
+    .grid .col{
+        width: 100%;
+    }
+}
+
+
+@media all and (min-width:769px) and (max-width:1200px){
+    .grid .col{
+        width: 100%;
+    }
+}
+
+.full-page{
+    padding: 0 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 73px;
+    height: 100vh;
+    background: turquoise;
+}
+
+.full-page-content{
+    max-width: 1200px;
+    padding: 0 30px;
+}
+

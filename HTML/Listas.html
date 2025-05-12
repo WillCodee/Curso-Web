@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTAS</title>
+</head>
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+        nav{
+            height: 50px;
+            background: rgba(0,0,0,0.5);
+           
+            
+        }
+
+        nav a{
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'sans-serif';
+            background: red;
+            padding: 10px 20px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        nav ul{
+                display: flex;
+                height: 50px;
+                list-style: none;
+                background: red;
+        }
+
+        nav a:hover{
+            background: rgba(0,0,0,0.1);
+        }
+        .lista{
+            padding-left: 30px;
+        }
+        
+    </style>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+    </nav>
+
+    <ul class="lista" type="circle">
+        <li>Java</li>
+        <li>Java Script</li>
+        <li>Python</li>
+        <li>C#</li>
+    </ul>
+
+    <ul class="lista" type="square">
+        <li>Java</li>
+        <li>Java Script</li>
+        <li>Python</li>
+        <li>C#</li>
+    </ul>
+
+    <ul class="lista" type="disc">
+        <li>Java</li>
+        <li>Java Script</li>
+        <li>Python</li>
+        <li>C#</li>
+    </ul>
+
+    <hr>
+
+    <ol class="lista" type="A">
+        <li>Java</li>
+        <li>Java Script</li>
+        <li>Python</li>
+        <li>C#</li>
+    </ol>
+
+    <ol class="lista" type="1" start="20">
+        <li>Java</li>
+        <li>Java Script</li>
+        <li>Python</li>
+        <li>C#</li>
+    </ol>
+
+    <ol class="lista" type="i">
+        <li>Java</li>
+        <li>Java Script</li>
+        <li>Python</li>
+        <li>C#</li>
+    </ol>
+
+    <hr>
+
+    <dl class="lista" > <!-- Descriação do termo e termo descrito -->
+        <dt>Café</dt>
+        <dd>- Bebida quente</dd>
+        <dt>Café</dt>
+        <dd>- Bebida Morna</dd>
+        <dt>Café</dt>
+        <dd>- Bebida Fria</dd>
+    </dl>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi officia facere quae. Ipsam inventore repudiandae perferendis mollitia molestias quis id, rem ex impedit accusantium. Aliquid et ducimus dicta! Pariatur, tempora.
+    Ab, consequuntur, expedita voluptate veritatis cumque vitae dolores itaque sequi dolorum maxime asperiores, sunt adipisci aliquid ad? Beatae quis pariatur reprehenderit praesentium incidunt deserunt cum ea ullam inventore dolor? Debitis.</p>
+
+    
+</body>
+</html>

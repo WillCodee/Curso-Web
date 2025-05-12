@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 2vmax;
+}
+/* Se baseia no elemento hook */
+
+.pai{
+    width: 50rem; 
+    /* 500px */
+    height: 100vh;
+    background: yellow;
+    overflow: hidden;
+}
+
+.pai > div{
+    width: 50%;
+    height: 50rem; 
+    background: blue;
+    
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth; 
+    /* Site rolando sozinho  */
+}
+
+/* vh e vw 1% da largura do viweport */
+
+.color-one{
+    background: turquoise;
+    height: 100vh;
+    
+    
+}
+.color-two{
+    background: violet;
+    height: 100vh;
+}

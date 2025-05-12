@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container{
+    display: flex; /*Controle de direção*/
+    flex-direction: row; /*COntrole do eixo principal*/
+    justify-content: space-between; /*Alinhar no eixo principal*/
+    flex-wrap: wrap; /*Caso passe quebra a linha*/
+    align-items: center; /*Eixo perpendicular*/
+    align-content: flex-start; /*Alinha o conteudo*/
+    background: yellow;
+    height: 800px;
+}
+.flex-item{
+    background: red;
+    width: 100%;
+}
+
+/* Flex: Mesma altura e estão um do lado dos outros 
+vem junto: - Flex-direction ; justify-content; aligns-items*/
+
+/* Flex direction: 
+row: horizontal
+column: vertical 
+row-reverse: inverte a ordem
+columns-reverse: inverte a área*/
+
+/* justify-content: flex-start;-> Inicio do eixo principal
+justify-content: flex-start; -> Final do eixo principal
+center: centro
+space-around: espaço em volta do elemento
+space-between: todo mundo com o mesmo espaço*/
+
+/* Aligns-item 
+center: Topo da página
+flex-start: Centro
+baseline: tão alinhados atraves da fonte*/
+.flex-containertow{
+    display: flex; /*Controle de direção*/
+    justify-content: space-between; /*Alinhar no eixo principal*/
+    background: yellow;
+   flex-flow: row wrap;
+   height: 800px;
+}
+
+.flex-item-two{
+    flex-grow: 1; /*Define quanto o item pode crescer*/
+    flex-shrink: 1 ; /*Controla quanto o item pode encolher*/
+    flex-basis: 320px; /*Define o tamanho inicial do item antes de crescer ou encolher.*/
+    margin-bottom: 2%;
+    background: red;
+    color: white;
+    height: 200px;
+}
+
+.flex-item-two:nth-child(2){
+    flex: 2 1 320px; /*Atalho dos flex*/
+    /* Aumenta duas vezes mais que o outro - depende do espaço em branco */
+    background: purple;
+    align-self: flex-end;
+    /* Alinhamento diferente */
+}
+
+.flex-item-two:nth-child(3){
+    order: -2;
+}
+
+/* Pode fazer flex dentro de outros flex */
+
+.two-columns{
+    display: flex;
+}
+
+.tow-columns .two-cols{
+    display: flex;
+    flex-direction: column;
+    background: green;
+    margin: 15px;
+    padding: 30px;
+}
+.gallery{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.gallery .img{
+    flex: 1 0 20%;
+    height: 50px;
+    background: blue;
+    margin: 10px;
+}

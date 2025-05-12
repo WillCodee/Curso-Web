@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com NodeList(browser)</title>
+    <link rel="stylesheet" href="../MODELO/assets/CSS/style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Data e Hora Atual</h1>
+       <div class="paragrafos">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+       </div>
+    </section>
+
+
+    <script>
+        const paragrafos = document.querySelector('.paragrafos')
+        const ps = paragrafos.querySelectorAll('p');
+
+        const estilosBody = getComputedStyle(document.body)
+        const backgroundColorBody = estilosBody.backgroundColor;
+        const fontcolor = estilosBody.color
+
+        for( let p of ps){
+           p.style.backgroundColor = backgroundColorBody;
+           p.style.color = '#FFFFFF'
+        }
+
+    </script>
+</body>
+</html>

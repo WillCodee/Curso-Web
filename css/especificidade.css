@@ -1,0 +1,21 @@
+/* 
+    ID
+    Classes, atributos e pseudo_classes
+    Elementos e pseudo_elementos
+*/
+
+#p{
+    background: red !important;
+}
+/* importante faz força o uso */
+
+#p.p{
+    background: yellow ;
+}
+/* Id p E classe p */
+
+body#b.bclass p#p.p{
+    background: purple;
+}
+
+

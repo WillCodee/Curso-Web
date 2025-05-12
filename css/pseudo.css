@@ -1,0 +1,152 @@
+.heading{
+    transition: all 1s ease-in-out;
+}
+/* Pseudo Classe */
+.heading:hover{
+    background: red;
+}
+
+a{
+    color: darkorange;
+}
+
+a:link{
+    color: deeppink;
+}
+
+a:visited{
+    color: firebrick;
+}
+
+a:hover{
+    background: darkslateblue;
+    color: white;
+    text-decoration: none;
+}
+
+a:active{
+    background: darkslategray;
+    color: white;
+    text-decoration: none;
+}
+
+input:focus{
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:disabled{
+    background-color: blueviolet;
+}
+
+input:enabled{
+    background-color: chocolate;
+    cursor: not-allowed;
+}
+
+input:checked{
+    width: 50px;
+    height:50px;
+}
+
+input:checked + p{
+    background: blue;
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+input:enabled + p{
+    transition: all 1s ease-in-out;
+}
+/* Desabilitado */
+
+.pai .lista li:first-child{
+    background: red;
+} 
+/* Primeira opção */
+
+.pai .lista li:last-child{
+    background: gray;
+}
+/* Ultima opção */
+
+input:required{
+    background: rgb(64, 160, 34);
+}
+
+/* Pseudo de Negação */
+
+p:not(.meio){
+    color: brown;
+}
+/* não será selecionado */
+
+input:not(:checked)+p{
+    background: yellow;
+}
+ul li:not(.lista):nth-child(1) {
+    background-color: aqua;
+} 
+/* elemento selecionado */
+
+ul li:nth-child(even){
+    background-color: yellow;
+}
+/* Par */
+
+ul li:nth-child(odd){
+    background-color: cornflowerblue;
+}
+/* Impar */
+
+ul li:nth-child(3n+2){
+    background-color: crimson;
+}
+/* Contado do 2 vai de 3 em 3 */
+
+p:nth-child(5n+3){
+    background-color: darkblue;
+}
+
+p:nth-child(even){
+    color: black;
+}
+
+/* Pseudo Elementos */
+
+ul li::after{
+    content: ' - ';
+    color: white;
+    display: block;
+}
+
+ul li::before{
+    content: ' - ';
+    color: white;
+    display: block;
+}
+
+h4::first-letter{
+    font-size: 50px;
+    display: block;
+    float: left;
+    margin: 0px 10px 10px 0;
+}
+h4{
+    font-size:  18px;
+}
+
+h4::first-line{
+    background: red;
+}
+
+h4::selection{
+  background: black;
+  color: white;
+}
+
+::placeholder{
+    font-size: 30px;
+    color: blue;
+}

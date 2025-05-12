@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios com For</title>
+    <link rel="stylesheet" href="../MODELO/assets/CSS/style.css">
+</head>
+<style>
+
+</style>
+<body>
+    <section class="container">
+        <h1>Exercicios usando for</h1>
+       <!-- As coisas aparecem Aqui -->
+    </section>
+
+
+    
+       <script>
+        const elementos = [
+            {tag:'p', texto: 'Frase 1'},
+            {tag:'div', texto: 'Frase 2'},
+            {tag:'section', texto: 'Frase 3'},
+            {tag:'footer', texto: 'Frase 4'}
+       ]
+       //Um array com vários objetos
+
+        const container = document.querySelector('.container')
+        const div = document.createElement('div') //criar um elemento
+
+        for (let i=0; i < elementos.length; i++){
+           let { tag, texto} = elementos[i];
+           let tagCriada = document.createElement(tag)
+           
+            // tagCriada.innerHTML = texto;
+            tagCriada.innerText = texto;
+            div.appendChild(tagCriada) //adiciona o elemento como "filho de algp"
+            // <div>(aqui seria o filho)</div>
+        }
+
+        container.appendChild(div)
+
+       </script>
+</body>
+</html>

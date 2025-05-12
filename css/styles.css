@@ -1,0 +1,74 @@
+.caixa{
+    background: red;
+    height: 120px;
+    width: 120px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p, h1{
+    color: darkblue;
+}
+
+body div section {
+    color: red;
+}
+
+body div section p,
+body div section h1{
+    color: green;
+}
+
+.heading{
+    color: purple;
+}
+
+.main-content h2,p{
+    font-style: italic;
+    color: black;
+}
+
+.main-content ,.heading{
+    border: 1px solid red;
+}
+
+.pai > .filha{
+    color: rgb(199, 212, 14);
+}
+
+.irmao h1+p{
+    color: blueviolet;
+} 
+
+/* Vem depois do p */
+.irmao p+h1{
+    color: darkgreen;
+}
+/* vem antes do p */
+
+.broter h1~p{
+    color: chocolate;
+}
+
+/* Seleciona todos os p */
+
+.broter .um~.dois{
+    color:coral;
+}
+
+.broter .um+.dois{
+    color:rgb(197, 65, 169);
+}
+
+[meu-atributo]{
+    color: darkgoldenrod;
+}
+
+[checked]{
+    width: 50px;
+    height: 50px;
+    
+}

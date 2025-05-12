@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Usando Array, Objetos e Funções</title>
+</head>
+<body>
+
+    <form class="form" method="get">
+        <p>Nome: <input type="text" class="nome"></p>
+        <p>Sobrenome: <input type="text" class="sobrenome"></p>
+        <p>Peso: <input type="text" class="peso"></p>
+        <p>Altura: <input type="text" class="altura"></p>
+        <button>Enviar</button>
+    </form>
+
+    <div class="resultado">
+
+    </div>
+
+
+    <script>
+        function formulario(){
+            const form = document.querySelector('.form')
+            const resultado = document.querySelector('.resultado')
+
+            const pessoas = [];
+
+            function recebeEventoForm (evento){
+                evento.preventDefault()
+                const nome = form.querySelector('.nome')
+                const sobrenome = form.querySelector('.sobrenome')
+                const peso = form.querySelector('.peso')
+                const altura = form.querySelector('.altura')
+
+                pessoas.push({
+                    nome: nome.value,
+                    sobrenome: sobrenome.value,
+                    peso: peso.value,
+                    altura: altura.value
+                })
+
+                resultado.innerHTML += `${nome.value} ${sobrenome.value} tem ${peso.value}kg 
+                e tem ${altura.value}m <br />`
+
+                console.log(pessoas)
+            }
+            
+            form.addEventListener('submit', recebeEventoForm);
+        }
+
+        formulario()
+    </script>
+
+
+</body>
+</html>

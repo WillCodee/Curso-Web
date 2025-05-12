@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+</head>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .cabecalho{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgb(0,0,0,0.7);
+    }
+
+    .logo{
+        width: 200px;
+        margin: 20px;
+        margin-left: 7%;
+        
+       
+    }
+
+    .botao-entrar{
+        
+        margin-right: 5%;
+        background: red;
+        border-radius: 15%;
+        width: 100px;
+        height: 45px;
+        font-family: sans-serif;
+        color: white;
+        font-size: 15px;
+        
+    }
+    .botao-entrar:hover{
+        background: rgb(184, 37, 37);
+    }
+
+    .fundo{
+        background-image: url('image/fundonetflix.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        height: 100vh;
+    }
+    .conteudo{
+        text-align: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+    .titulo{
+        color: white;
+    }
+    .subtitulo{
+        color: white;
+    }
+    .texto{
+        color: white;
+    }
+    .botao-entrar-form{
+        background: red;
+        border-radius: 15%;
+        width: 60px;
+        height: 35px;
+        font-family: sans-serif;
+        color: white;
+        font-size: 15px;
+        margin: 0;
+    }
+    .botao-entrar-form:hover{
+        background: rgb(184, 37, 37);
+    }
+    .caixa{
+        height: 30px;
+        padding: -5px;
+        margin: 0;
+    }
+</style>
+
+<body class="fundo">
+    <header class="cabecalho">
+        <img class="logo" src="image/image-removebg-preview.png" alt="Logo">
+
+        <button class="botao-entrar">
+            Entrar
+        </button>
+    </header>
+
+    <div class="conteudo">
+        
+        <h1 class="titulo">Filmes,séries e muito mais.<br>Sem limites.</h1>
+        <h2 class="subtitulo">Assista onde quiser. Cancele quando quiser</h2>
+        <form action="">
+            <p class="texto">Pronto pra assistir?
+            Informe seu email para criar ou reiniciar sua assinatura.</p>
+                <label for="email" placeholder="email">
+                <input class="caixa" type="email" placeholder="Email">
+                <button class="botao-entrar-form"type="submit">Enviar</button>
+            </label>
+        </form>
+    </div>
+</body>
+</html>

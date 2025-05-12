@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS BOX-MODEL</title>
+</head>
+    <style>
+        .section-one{
+            background: deeppink;
+            background-size: cover;
+            background-position: center;
+            background-image: url('image/fundonetflix.jpeg');
+            color: white;
+            border-bottom-width: 10px;
+            border-width: 10px;
+            border-bottom-color: firebrick;
+            border-top-color: yellow;
+            border-left-color: green;
+            border-right-color: blue;
+            border-bottom-style: solid;
+            border: 5px solid black; 
+            width: 200px;
+            height: 150px;
+            padding: 10px;
+            margin: 30px;
+        }
+        .section-two{
+            background: cyan;
+            border: 5px solid black; 
+            width: 200px;
+            height: 150px;
+            padding: 15px;
+            margin: 20px;
+        }
+
+        .section-one,.section-two{
+            box-sizing: border-box;
+        }
+    </style>
+
+<body>
+    <section class="section-one">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. .</p>
+    </section> <section class="section-two">
+        2
+    </section>
+</body>
+</html>

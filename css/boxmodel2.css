@@ -1,0 +1,19 @@
+.texto{
+    background: red;
+    width: 100%;
+    max-width: 600px;
+    max-height: 500px;
+    min-width: 0%;
+    min-height: 100px;
+    height: 200px;
+    overflow-y: auto; /* A barra só vai aparecer se o conteudo passar*/
+    margin: 0 auto 50px auto; /* se ajusta no meio da página automaticamente */
+    border: 5px solid black;
+    padding: 50px;
+    box-sizing: content-box;
+    border-width: 5px; 
+    /* largura de borda */
+    border-style: solid;
+    /* estilo da borda */
+    border-color: burlywood;
+}

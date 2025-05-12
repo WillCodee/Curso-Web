@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABELAS</title>
+</head>
+
+    <style>
+        table td, table th{
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 800%;
+        }
+        body{
+            font-family: sans-serif;
+        }
+
+        table caption{
+            caption-side: bottom;
+            text-align: right;
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 5px 0;
+        }
+
+        tfoot td, table th{
+            background: #ddd;
+        }
+
+        tfoot td{
+            font-style: italic;
+        }
+
+        .responsive-table{
+            max-width: 100%;
+            overflow-x: auto;
+        }
+    </style>
+
+<body>
+    <p>Vamos Começar a aula sobre Tabelas!</p>
+    <div class="responsive-table">
+        <table> <!-- CORPO DA TABELA-->
+        <caption>Uma descrição para a Tabela</caption> <!--Descriçao da Tabela-->
+        <thead> <!-- CABEÇALHO -->
+            <tr> <!--LINHAS -->
+                <th>Titulol 1</th> <!-- COLUNA -->
+                <th>Titulol 2</th> <!-- COLUNA -->
+                <th>Titulol 3</th> <!-- COLUNA -->
+            </tr>
+        </thead>
+
+        <tbody> <!--CORPO DA TABELA-->
+            <tr>
+                <td>Corpo 1</td> <!--DADOS DA TABELA-->
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2">AQUI </td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <!-- <td>Corpo 1</td>
+                <td>Corpo 2</td> -->
+                <td>Corpo 3</td>
+            </tr>
+            
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2" rowspan="2"></tdcolspan></td>
+                <td>TOTAL: </td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">R$555</td>
+            </tr>
+           <!-- colspan = ocupar mais colunas -->
+            <!-- rowspan ocupar mais linhas -->
+        </tfoot>
+        </table>
+    </div>
+</body>
+</html>
