@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+
+<style>
+    *{
+    box-sizing: border-box;
+    outline: 0;
+}
+
+:root{
+    --primary-color: #174a57;
+    --primary-color-dark: #0f262c;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container{
+    max-width: 640px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px
+}
+</style>
+<body>
+    <section class="container">
+        <h1>Lista de Afazeres</h1>
+        <p>
+            <input type="text" id="input-tarefa">
+            <button id="btn-tarefa">Adicionar Tarefa</button>
+        </p>
+
+        <div id="tarefa">
+
+        </div>
+
+    </section>
+
+    <script src="testeLista.js"></script>
+</body>
+</html>

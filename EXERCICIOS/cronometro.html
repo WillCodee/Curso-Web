@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando - Fazendo Cronômetro</title>
+</head>
+
+<style>
+*{
+    box-sizing: border-box;
+    outline: 0;
+}
+
+:root{
+    --primary-color: #174a57;
+    --primary-color-dark: #0f262c;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container{
+    max-width: 640px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px
+}
+
+#relogio{
+    font-family: monospace;
+    font-size: 3rem;
+    color: black
+}
+
+
+button{
+    background-color: rgb(17, 101, 211);
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+}
+
+</style>
+
+<body>
+    <section class="container">
+        <h1>Cronômetro</h1>
+        <p id="relogio">00:00:00</p>
+        <button id="iniciar">Iniciar</button>
+        <button id="pausar">Pausar</button>
+        <button id="zerar">Zerar</button>
+    </section>
+
+    <script src="cronometro.js"></script>
+</body>
+</html>

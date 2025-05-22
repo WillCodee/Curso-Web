@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="../MODELO/assets/CSS/style.css">
+</head>
+
+<style>
+#calculadora{
+    width: 400px;
+}
+
+button{
+width: 100px;
+height: 50px;
+font-size: 20px;
+}
+
+#display{
+width: 420px;
+height: 50px;
+font-size: 20px;
+text-align: right;
+}
+
+</style>
+
+<body>
+    
+    <section class="container">
+        <h1>Calculadora</h1>
+        <table id="calculadora">
+            <tr>
+                <td colspan="4"><input type="text" id="display"></td>
+            </tr>
+
+            <tr>
+                <td><button class="btn" id="btn-clear">C</button></td>
+                <td><button class="btn" id="btn-num">(</button></td>
+                <td><button class="btn" id="btn-num">)</button></td>
+                <td><button class="btn" id="btn-num">/</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="btn" id="btn-num">7</button></td>
+                <td><button class="btn" id="btn-num">8</button></td>
+                <td><button class="btn" id="btn-num">9</button></td>
+                <td><button class="btn" id="btn-num">*</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="btn" id="btn-num">6</button></td>
+                <td><button class="btn" id="btn-num">5</button></td>
+                <td><button class="btn" id="btn-num">4</button></td>
+                <td><button class="btn" id="btn-num">-</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="btn" id="btn-num">3</button></td>
+                <td><button class="btn" id="btn-num">2</button></td>
+                <td><button class="btn" id="btn-num">1</button></td>
+                <td><button class="btn" id="btn-num">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" id="btn-num">.</button></td>
+                <td><button class="btn" id="btn-num">0</button></td>
+                <td><button class="btn" id="btn-del">&laquo;</button></td>
+                <td><button class="btn" id="btn-eq">=</button></td>
+            </tr>
+
+        </table>
+    </section>
+
+
+    <script src="calculadora.js"></script>
+</body>
+</html>
