@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function media(notas){
+    let total=0
+    for(let i of notas){
+        total += i
+    }
+    return total/notas.length
+}
+
+const nota = [3,4,5,6]
+console.log(media(nota))
+
+console.log('############################################')
+
+function notaPonderada(nota,peso){
+   return nota * peso
+}
+
+function resultado(avaliacao){
+    if(avaliacao >= 7){
+        return 'Aprovado'
+    }else{
+        return 'Reprovado'
+    }
+}
+
+function media2(nota2){
+    let total = 0
+    for( let i of nota2){
+        total += i
+    }
+    return total
+}
+
+const nota1 = notaPonderada(10,3)
+const nota2 = notaPonderada(5,5)
+const nota3 = notaPonderada(8,2)
+let notaP = [nota1,nota2,nota3]
+let total = media2(notaP) / 10
+console.log(resultado(total),total) 
+
+const nota4 = notaPonderada(10,3)
+const nota5 = notaPonderada(5,5)
+const nota6 = notaPonderada(7,2)
+notaP = [nota4,nota5,nota6]
+ total = media2(notaP) / 10
+console.log(resultado(total),total) 
+
+console.log('############################################')
+
+function Produto(valor,desconto){
+    this.valor = valor,
+    this.desconto = desconto,
+
+    this.calculo = function(){
+        console.log(this.valor - (this.valor * (this.desconto / 100))) 
+    }
+}
+const produto1 = new Produto(100,20)
+const produto2 = new Produto(100,65)
+produto1.calculo()
+produto2.calculo()
+
+console.log('############################################')
+
+function idade(idade){
+    if(idade >=18){
+        console.log('Maior de Idade')
+    }else{
+        console.log('Menor de Idade')
+    }
+
+    const verificar = (num) =>{
+        return (num % 2 === 0) ? 'Idade é Par' : 'Idade é Impar'
+    }
+
+    console.log(verificar(idade))
+}
+
+let maioridade = idade(15)
+maioridade = idade(20)
+
+console.log('############################################')
+</script>
+</html>

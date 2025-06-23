@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Treinando Funções</h1>
+</body>
+
+<script>
+    // Função Construtora
+    function Pessoa(nome, idade, profissao){
+
+        this.nome = nome
+        this.idade = idade
+        this.profissao = profissao
+
+        this.apresentar = function(){
+            console.log(`Olá, meu nome é ${nome}, tenho ${idade} anos e sou ${profissao}`)
+        }
+    }
+
+    const pessoa1 = new Pessoa("William", 19, "Programador")
+    const pessoa2 = new Pessoa("Maria", 20, "Psicologa")
+    pessoa1.apresentar()
+    pessoa2.apresentar()
+
+    function Produto(nome, preco, descricao){
+        this.nome,
+        this.preco,
+        this.descricao
+
+        this.apresentar = function(){
+            console.log(`O Produto: ${nome}, tem R$${preco} e é descrito como: ${descricao} `)
+        }
+    }
+
+    const produto1 = new Produto("Veja",15.70,"Produto de Limpeza")
+    produto1.apresentar()
+
+    // ----------------------------------------------------------
+
+    // callbacks
+    function calcular(a, b, operacao){
+        return operacao(a, b)
+    }
+
+    function soma(a,b){
+        return a + b;
+    }
+
+    function subtração(a,b){
+        return a - b;
+    }
+
+    function divisao(a,b){
+        return a / b;
+    }
+
+    function multiplicação(a,b){
+        return a * b;
+    }
+
+    console.log(calcular(5,3,subtração))
+
+    function processarArray(array, callback){
+       if(callback.name === "filter"){
+        return array.filter(callback);
+       }else{
+        return array.map(callback)
+       }
+    }
+
+    function dobrar(num){
+        return num*2
+    }
+
+    function filtrar(num){
+        return num % 2 === 0
+    }
+
+    function somar10(num){
+        return num + 10
+    }
+
+    const numeros = [1,2,3,4,5]
+    console.log(processarArray(numeros,dobrar))
+    console.log(processarArray(numeros,filtrar))
+    console.log(processarArray(numeros,somar10))
+
+    // ----------------------------------------------------------
+    //Factory
+    function CriaProduto(nome, preco, desconto = 0){
+        return{
+            nome,
+            preco,
+            desconto,
+
+            precofinal: function(){
+                let preco_final = this.preco - (this.preco * (this.desconto / 100))
+                return preco_final.toFixed(2)
+            }
+        };
+    }
+
+    const produto2 = CriaProduto('Óleo de Banho', 55, 10)
+    console.log(produto2.precofinal())
+
+    function CriarPessoa(nome,sobrenome,idade=18){
+        return{
+            nome,
+            sobrenome,
+            idade,
+
+            falar: function(){
+                console.log(`Oi eu sou ${nome} ${sobrenome} e tenho ${idade} anos`)
+            }
+        };
+    }
+
+    const pessoa3 = CriarPessoa("William","lago",20)
+    console.log(pessoa3.falar())
+    // ----------------------------------------------------------
+    //Geradora
+    function* contador(limite){
+        for(let i=0; i<=5;i++){
+            yield i
+        }
+    }
+
+    const gen = contador(5);
+    console.log(gen.next().value)
+    console.log(gen.next().value)
+    console.log(gen.next().value)
+    console.log(gen.next().value)
+    console.log(gen.next().value)
+    console.log(gen.next().value)
+
+    // ----------------------------------------------------------
+
+    function* contarPessoa(nome){
+        for(let i of nome){
+            yield i
+        }
+    }
+
+    const pessoas = ["William","Maria","Mariana","Isaque","Luiza"]
+    const gerador = contarPessoa(pessoas)
+    console.log(gerador.next().value)
+    console.log(gerador.next().value)
+    console.log(gerador.next().value)
+    console.log(gerador.next().value)
+    console.log(gerador.next().value)
+
+    
+</script>
+</html>

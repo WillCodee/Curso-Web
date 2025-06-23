@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+        //IIFE
+    // Só funciona se apagar tudo
+     (function(a,b){
+        console.log(a+b)
+     })(3,7);
+
+     (function(nome,nacionalidade, idade){
+        const sobrenome = 'Lago'
+        
+        function criaNome(nome){
+            return nome + ' ' + sobrenome
+        }
+        console.log(criaNome(nome))
+     })('William', 'Brasileiro', 19 );
+
+     
+
+     //Parâmetros
+
+     function combinarTexto(texto1, texto2 = 'mundo'){
+        console.log(texto1, texto2)
+     }
+     console.log(combinarTexto('Will'))
+     console.log(combinarTexto('Will', 'Hello World'))
+
+     //Recursivas
+     function fatorial(n){
+        let total
+        let fatorial = 1
+        for(let i = 0; i<n; i++){
+            total = n-i
+            fatorial *= total
+        }
+        console.log(fatorial)
+     }
+     fatorial(5)
+
+     //Retorno
+     function ehPar(num){
+        if(num  % 2 == 0){
+            return true
+            console.log(true)
+        }else{
+            return false
+            console.log(false)
+        }
+     }
+
+     function verificarNumero(verificar){
+        if(verificar){
+            console.log(`${num} é Par`) 
+            return true
+        }else{
+            
+            console.log(`${num} é Impar`)
+            return false
+        }
+     }
+     const num = 4
+     const verificar = ehPar(num)
+     console.log(verificarNumero(verificar))
+
+</script>
+</html>
