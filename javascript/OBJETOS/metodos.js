@@ -1,10 +1,13 @@
-const produto = {nome: "Caneca", preco: 1.8};
-const outraCoisa = { ...produto };
+const produto = {nome: "Produto", preco: 1.8};
+// const caneca = { ...produto, material:'porcelana' }; //Aponta ora outra variavel
+//o que altera em um altera na outra e vice versa
+const caneca = Object.assign({}, produto, {material: 'porcelana'});
 
-outraCoisa.nome = 'Outro nome';
-outraCoisa.preco = 2.5;
+
+caneca.nome = 'Outro nome';
+caneca.preco = 2.5;
 console.log(produto);
-console.log(outraCoisa)
+console.log(caneca)
 
 
 
