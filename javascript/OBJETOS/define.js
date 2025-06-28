@@ -31,7 +31,7 @@ function Produto(nome,preco,estoque){
 const p1 = new Produto('Camiseta',20,3)
 p1.estoque = 50000
 console.log(p1)
-console.log(Object.keys(p1));
+console.log(Object.keys(p1)); //Chaves
 
 for(let chave in p1){
     console.log(chave)
