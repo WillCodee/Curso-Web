@@ -92,10 +92,4 @@ if(cpf2.valida()){
     console.log('Cpf inválido')
 }
 
-
-
-
-
-
-
-
+ 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch APi e Axsios(JSON)</title>
+    <link rel="stylesheet" href="../MODELO/assets/CSS/style.css">
+</head>
+<style>
+    table{
+        width: 100%;
+    }
+</style>
+<body>
+    <section class="container">
+        <h1>Fetch APi e Axsios(JSON)</h1>
+        <h2>Pessoas</h2>
+        <div class="resultado"></div>
+    </section>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    // JavaScript Object Notation — uma maneira leve de armazenar e 
+    // transportar dados em formato de texto. Ele é usado em quase toda 
+    // aplicação web que envia ou recebe informações.
+
+    // fetch('pessoas.json')
+    // .then(resposta => resposta.json())
+    // .then(json => carregaElementosNaPagina(json))
+
+    axios('pessoas.json')
+    .then(resposta => carregaElementosNaPagina(resposta.data))
+
+    function carregaElementosNaPagina(json){
+        const table = document.createElement('table')
+        for(let pessoa of json){
+            const tr = document.createElement('tr')
+
+            
+            let td1 = document.createElement('td')
+                td1.innerHTML = pessoa.nome
+                tr.appendChild(td1)
+
+            let td2 = document.createElement('td')
+                td2.innerHTML = pessoa.idade
+                tr.appendChild(td2)
+
+            let td3 = document.createElement('td')
+                td3.innerHTML = pessoa.salario
+                tr.appendChild(td3)
+
+                table.appendChild(tr)
+        }
+        const resultado = document.querySelector('.resultado')
+        resultado.appendChild(table)
+    }
+
+</script>
+</html>

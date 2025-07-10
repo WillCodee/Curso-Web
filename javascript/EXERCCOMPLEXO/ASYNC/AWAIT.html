@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio usando async/await</title>
+</head>
+<style>
+
+</style>
+<body>
+    <h1>Buscar dados de dois usuários diferentes com async/await</h1>
+    <div id="resultado"></div>
+
+</body>
+<script>
+    const url1 = 'https://jsonplaceholder.typicode.com/users/1'
+    const url2 = 'https://jsonplaceholder.typicode.com/users/2'
+
+    async function buscarUsuarios(){
+        const resp1 = await fetch(url1)
+        const user1 =  await resp1.json()
+
+        const resp2 = await fetch(url2)
+        const user2 = await resp2.json()
+
+        const dados = [user1,user2]
+
+        const ul = document.createElement('ul')
+
+        for(let pessoas of dados){
+            let li = document.createElement('li')
+            li.innerHTML = pessoas.name
+            ul.appendChild(li)
+        }
+
+        const resultado = document.getElementById('resultado')
+        resultado.appendChild(ul)
+    }
+
+    buscarUsuarios()
+</script>
+</html>

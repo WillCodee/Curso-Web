@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Axios e Promises</title>
+</head>
+<style>
+
+</style>
+<body>
+    <section class="container">
+        <form action="">
+            <h1>Buscando Usuarios</h1>
+
+            <div id="resultado"></div>
+        </form>
+    </section>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+
+    const url = 'https://jsonplaceholder.typicode.com/users'
+
+    axios(url)
+    .then(resposta  => carregarDados(resposta.data))
+    .catch(e=>alert(e))
+
+    async function carregarDados(json){
+        try{
+            const quantidade = await new Promise((resolve,reject) =>{
+                setTimeout(() => {
+                    resolve(json.length)
+                },2000)
+            })
+            carregaResultado(quantidade)
+        }catch(e){
+            alert(e)
+        }
+    }
+
+    function carregaResultado(quantidade){
+        const resultado = document.querySelector('#resultado')
+        resultado.innerHTML = `Foram encontrados ${quantidade} usuários`
+    }
+
+</script>
+</html>

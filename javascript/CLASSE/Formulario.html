@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../MODELO/assets/CSS/style.css">
+</head>
+    <style>
+        input{
+            width: 100%;
+            height: 30px;
+        }
+
+        input:focus{
+            border: 2px solid rgb(28, 148, 196);
+        }
+
+        .error-text{
+            font-size: 12px;
+            color: red;
+        }
+    </style>
+<body>
+    
+    <section class="container">
+        <h1>Formulário de cadastro</h1>
+
+        <ul>
+            <li>Nenhum campo pode estar vazio</li>
+            <li>Usuário só poderá conter letras e/ou números</li>
+            <li>Usuário deverá ter entre 3e 12 caracteres</li>
+            <li>Senha precisa ter entre 6 e 12 caracteres</li>
+        </ul>
+        <form action="/" method="POST" class="formulario">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome " class="validar">
+
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" id="sobrenome " class="validar">
+
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" class="validar cpf">
+
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario " class="validar usuario">
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" class="validar">
+
+            <label for="repetir-senha">Repetir Senha</label>
+            <input type="password" id="repetir-senha" class="validar">
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+<script src="ValidandoCPF.js"></script>
+<script>
+    class ValidaFormulario{
+        constructor(){
+            this.formulario = document.querySelector('.formulario')
+            this.eventos()
+        }
+
+        eventos(){
+            this.formulario.addEventListener('submit', e => {
+                this.handleSubmit(e)
+            })
+        }
+
+        handleSubmit(e){
+            e.preventDefault()
+            const camposValidos = this.CamposSaoValidos()
+            const senhasValidas = this.senhasSaoValidas()
+
+            if(camposValidos && senhasValidas){
+                alert('Formulario enviado')
+                this.formulario.submit()
+            }
+        }
+
+        senhasSaoValidas(){
+            let valid = true
+            const senha = this.formulario.querySelector('#senha')
+            const repetirSenha = this.formulario.querySelector('#repetir-senha')
+
+            if(senha.value !== repetirSenha.value){
+                valid = false;
+                this.criaErro(senha, 'Campos Senha e repetir senha precisam ser iguais')
+                this.criaErro(repetirSenha, 'Campos senha e repetir senha precisam ser iguais')
+            }
+
+
+            if(senha.value.length < 6 || senha.value.length >12){
+                valid = false
+                this.criaErro(senha, 'Senha precisa estar entre 6 e 12 caracteres')
+            }
+            return valid
+        }
+
+        CamposSaoValidos(){
+            let valid = true;
+            
+            for(let errorText of this.formulario.querySelectorAll('.error-text')){
+                errorText.remove()
+            }
+            for(let campo of this.formulario.querySelectorAll('.validar')){
+                const label = campo.previousElementSibling.innerText //elemento irmão anterior
+                
+                if(!campo.value){
+                    this.criaErro(campo, `Campo "${label}" não pode estar em branco`)
+                    valid = false
+                }
+
+                if(campo.classList.contains('cpf')){
+                    if(!this.validaCPF(campo)){
+                        valid = false
+                    }
+                }
+
+                 if(campo.classList.contains('usuario')){
+                    if(!this.validaUsuario(campo)){
+                        valid = false
+                    }
+                }
+            }
+            return valid
+        }
+
+        validaUsuario(campo){
+            const usuario = campo.value
+            let valid = true
+
+            if(usuario.length < 3 || usuario.length > 12){
+                this.criaErro(campo, 'Usuário precisa ter entre 3 e 12 caracteres')
+                valid = false
+            }
+
+            if(!usuario.match(/^[a-zA-Z0-9]+$/g)){
+                this.criaErro(campo, 'Nome de usuário precisa conter apenas letras ou números')
+                valid = false
+            }
+
+            return valid
+        }
+
+        validaCPF(campo){
+            const cpf = new ValidaCPF(campo.value)
+
+            if(!cpf.valida()){
+                this.criaErro(campo, 'CPF inválido')
+                return false
+            }
+
+            return true
+        }
+
+        criaErro(campo, msg){
+            const div = document.createElement('div')
+            div.innerHTML = msg;
+            div.classList.add('error-text')
+            campo.insertAdjacentElement('afterend', div)
+
+        }
+    }
+
+    const valida = new ValidaFormulario()
+</script>
+
+</html>

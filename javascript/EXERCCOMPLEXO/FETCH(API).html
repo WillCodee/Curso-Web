@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        background-image: url('https://cdn.pixabay.com/photo/2025/06/05/16/39/desert-9643279_1280.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .container{
+        align-items: center;
+        max-width: 569px;
+        background: white;
+        border-radius: 15px;
+        margin: 50px auto;
+    }
+
+    form{
+        display: flex;
+        align-items: center;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    tr{
+        display: block;
+        margin: 10px auto;
+    }
+    
+</style>
+
+<body>
+    <section class="container">
+        <form action="">
+            <h1>Consumindo API com Fetch e async/await</h1>
+
+            <div class="resultado"></div>
+        </form>
+    </section>
+    
+</body>
+<script>
+    const URL = 'https://jsonplaceholder.typicode.com/posts'
+    fetch(URL)
+    .then(resp => resp.json())
+    .then(json => carregarPagina(json))
+
+    async function carregarPagina(json){
+        const table = document.createElement('table')
+       const userID = json.filter(pessoa => pessoa.userId === 1)
+
+
+        for(let pessoas of userID){
+            const tr = document.createElement('tr')
+            
+                let td = document.createElement('td')
+                td.innerHTML = pessoas.title 
+                tr.appendChild(td)
+
+                table.appendChild(tr)
+            
+        }
+        const resultado = document.querySelector('.resultado')
+        resultado.appendChild(table)
+    }
+
+</script>
+</html>
