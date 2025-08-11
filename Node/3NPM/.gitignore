@@ -1,0 +1,41 @@
+Na pasta package no expresso ^ significa que a versão vai ser
+sempre atualizada, para tirar isso vc escreve no terminal:^
+npm install express -E 
+para atualizar npm update
+
+Move o express pra Pasta de Desenvolvimento (DevDependencies)
+npm install express --save-dev
+
+Pra voltar
+npm install express --save-prod
+
+Pra baixar uma versão especifica
+npm instal express@2.1.0
+
+2.     1.     0
+major  minor  patch
+
+Major (2) — Mudanças grandes que podem quebrar 
+a compatibilidade com versões anteriores
+
+Minor (1) — Novas funcionalidades adicionadas, 
+mas que não quebram o funcionamento existente.
+
+Patch (0) — Correções de bugs ou melhorias mínimas, 
+sem alterar funcionalidades.
+
+Se você está usando uma biblioteca 2.1.0 e ela muda para 2.2.0, 
+é um update minor — seguro para atualizar. Mas se for para 3.0.0, 
+já vale revisar se algo no seu código pode quebrar com essa nova versão.
+
+^ ele só vai atualizar a patch e minor
+O ~ só vai mexer na versão patch
+
+Para desisntalar
+npm uninstall express
+
+pra listar as dependencias
+npm ls
+
+Para verificar quais versões estão desatualizadas
+npm outdated

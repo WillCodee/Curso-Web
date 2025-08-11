@@ -1,0 +1,29 @@
+//npm init -y
+//npm install --save-dev @babel/preset-env @babel/cli @babel/core babel-loader webpack-cli regenerator-runtime core-js@2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

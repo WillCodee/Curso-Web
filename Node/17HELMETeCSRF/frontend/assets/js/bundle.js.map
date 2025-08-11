@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;;AAAA;AACA;AACA;AACAA,KAAK,CAAC,YAAY,CAAC,C","sources":["webpack://webpack/./src/index.js"],"sourcesContent":["//npm run gera\r\n//vá pro package.json\r\n//ctrl+c para a execução\r\nalert('Olá Mundo!')"],"names":["alert"],"sourceRoot":""}
