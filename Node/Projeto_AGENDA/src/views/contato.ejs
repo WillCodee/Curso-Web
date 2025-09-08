@@ -9,15 +9,18 @@
       <h1 class="text-center">Contato</h1>
       <p class="text-center lead">Crie ou edite seu contato abaixo.</p>
 
-
-       <%- include('includes/messages')%>
-
       <div class="row">
         <div class="col-lg">
           <h4>Faça seu cadastro</h4>
           <p>Se você ainda não tem conta, preencha o formulário abaixo</p>
           
-          <form action="/contato/register" method="POST">
+          <%- include('includes/messages')%>
+
+          <% if(contato._id) { %>
+          <form action="/contato/edit/<%= contato._id%>" method="POST">
+            <% } else { %>
+              <form action="/contato/register" method="POST">
+              <%  } %> 
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="form-group">
               <label>Nome</label>
@@ -37,7 +40,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Salvar</button>
           </form>
-
+          
         </div>
     </div>
 
