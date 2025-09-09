@@ -26,8 +26,8 @@ class Pessoa{
 exports.Pessoa = Pessoa
 
 exports = {
-Nome,
-Sobrenome,
+nome,
+sobrenome,
 Pessoa
 }
 console.log(exports)

@@ -1,6 +1,6 @@
 const {Nome, Sobrenome, FalaNome} = require('./mod1')
 console.log(Nome,Sobrenome)
-console.log(FalaNome())
+// console.log(FalaNome())
 
 //classe
 const path = require('path')
