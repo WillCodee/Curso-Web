@@ -31,26 +31,4 @@ app.listen(3000, ()=>{
 // Para instalar -> npm install nodemon --save-dev
 // Para inicializar -> npx nodemon _nome da aplicação_(server.js)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Nodemon reinicia o servidor automaticamente quando há mudanças no código.

@@ -25,6 +25,6 @@ module.exports = (caminho,dados) =>{
 }
 
 
-
+//Usa fs.promises.writeFile para salvar dados no arquivo.
 
 

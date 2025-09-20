@@ -11,3 +11,19 @@ route.post('/', homeController.trataPost)
 route.get('/contato',contatoController.paginaInicial)
 
 module.exports = route
+
+/*
+express.Router() cria um "mini-sistema de rotas" que será usado dentro do server.js.
+
+Carrega os controllers → cada rota aponta para uma função do controller.
+
+Define rotas:
+
+GET / → chama homeController.paginaInicial
+
+POST / → chama homeController.trataPost
+
+GET /contato → chama contatoController.paginaInicial
+
+Exporta (module.exports) → para ser usado no server.js.
+*/
