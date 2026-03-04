@@ -74,3 +74,37 @@ npm i express
 - Trocar para offset: no config/config.js, use:
 - timezone: '-03:00'
 
+# Criar uma Tabela de Usuarios
+- no terminal digite
+- npx sequelize migration:create --name=users
+- Após preencher as informações
+- npx sequelize db:migrate
+- Caso tenha alguma coisa errada para reescrever digite:
+- npx sequelize db:migrate:undo
+
+# Bcrypt JS
+- Instale o BCript JS para fazer as operações da migration User
+- Onde o usuario vai informar a senha que não se encontra na base de dados
+- Então este campo precisa aparecer para que depois da senha informada
+- Seja possivel realizar o Hash
+- npm i bcryptjs
+
+
+- Após isso criou uma nova paste "User"em controllers e agora será criado
+- a rota em routes
+
+
+# Métodos
+-  index ->  Listar os Usuários -> GET
+- store/create -> cria um novo usuário -> POST
+- delete -> apaga um usuario -> DELETE
+- show -> mostra um usuario -> GET
+- update -> atualiza um usuário -> PATCH ou PUT
+
+
+-Adicione também o Use no arquivo Index
+
+# Teste no Insominia
+- Crie a pasta
+- Crie a requisição no metodo post
+- Rode a aplicação e teste

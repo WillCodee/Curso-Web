@@ -6,6 +6,8 @@ module.exports = {
   port: process.env.DATABASE_PORT,
   username: process.env.DATABASE_USERNAME,
   database: process.env.DATABASE,
+
+  //Campo que informa data de registro
   define:{
     timestamps: true,
     underscored: true,

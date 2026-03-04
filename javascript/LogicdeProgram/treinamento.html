@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino de Logica</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let nums = []
+    // let par = 0
+
+    // for(let i=0; i<5; i++){
+    //     let num = Number(prompt("Informe um valor"))
+    //     nums.push(num)
+    // }
+
+    // for(let i=0; i<nums.length; i++){
+    //     if(nums[i] % 2 === 0){
+    //         par++
+    //     }
+    // }
+
+    // alert(`Foram citados ${par} números pares`)
+
+    // let numeros = []
+    // let maior = 0
+
+    // for(let i = 0; i<5; i++){
+    //     let num=Number(prompt("Informe um número"))
+    //     numeros.push(num)
+    // }
+
+    // for(let valor of numeros){
+    //     if(valor>maior){
+    //         maior = valor
+    //     }
+    // }
+
+    // alert(`O Maior Número é ${maior}`)
+
+    // let num = Number(prompt("Informe um número"))
+    // let primo = true
+
+    // if (num <=1){
+    //     primo = false
+    // }else{
+    //     for(let i=2; i<num; i++){
+    //         if(num % i === 0){
+    //             primo = false
+    //             break
+    //         }
+    //     }
+    // }
+    // if(primo){
+    //     alert("É um número primo")
+    // }else{
+    //     alert("Não é um número primo")
+    // }
+
+
+    // let nome = prompt("Informe um nome: ")
+    // let nome_minusculo = nome.toLowerCase()
+    // let consoante = 0
+    // let vogal = 0
+
+    // for(let i=0; i<nome_minusculo.length; i++){
+    //     let letra = nome_minusculo[i]
+    //     if(letra >= "a" && letra <= "z"){
+    //         if(letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u"){
+    //             vogal++
+    //         }else{
+    //             consoante++
+    //         }
+    //     }
+    // }
+
+    // alert(`A palavra: ${nome} \nPossui: \n${vogal} Vogais; \n${consoante} Consoantes.`)
+    
+
+    let num = Number(prompt("Informe um Número: "))
+    let d=0
+        for(let i=1; i<=num; i++){
+            if(num % i == 0){
+                d++
+            }
+        }
+        if(d>2){
+            alert("Não é um número Primo")
+        }else{
+            alert("È um numero primo")
+        }    
+</script>
+</html>
